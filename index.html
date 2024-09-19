@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authenticating</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="contact-form">
+    <h2>Maheboob here 🤔🎉</h2>
+    <form id="userForm" name="submit-to-google-sheet" action="https://script.google.com/macros/s/AKfycbzlIDkcqKX0be4-ZYZaM9plM81RqcoBuBeHDt0SgGjRYhMssq_RbkdxR2_2NADlwazHOg/exec" method="POST">
+        <input type="text" id="name" name="Name" placeholder="Enter your name" required>
+        <input type="email" id="email" name="Email" placeholder="Enter your email" required>
+
+        <select id="gender" name="Gender"  required>
+          <option value="" disabled selected>Select your gender</option>
+          <option value="male">Male💪</option>
+          <option value="female">Female🦋</option>
+          <option value="other">Other🌈</option>
+        </select>
+
+        <!-- Funny Question Section -->
+        <div class="funny-question">
+          <label for="knowMe">You know me? 🤔</label>
+          <select id="knowMe" name="knowMe" onchange="showFunnyMessage()" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="Yes, of course! 😎">Yes, of course! 😎</option>
+              <option value="Maybe, but who are you again? 🤷‍♂️">Maybe, but who are you again? 🤷‍♂️</option>
+              <option value="Not sure, but I like your style! 😄">Not sure, but I like your style! 😄</option>
+              <option value="Nope, but I'm getting to know you! 👋">Nope, but I'm getting to know you! 👋</option>
+          </select>
+        </div>
+
+        <button type="submit">Submit</button>
+        <p id="formMessage" style="color: green; font-weight: bold;"></p>
+        <p id="portfolio-link"></p>
+    </form>
+  </div>
+</body>
+</html>
